@@ -7,5 +7,11 @@ fn main() -> Result<()> {
 
     client.connect()?;
 
-    Ok(())
+    loop {
+        let activity = model::Activity::new().state("Hello, World!").details("I'm a bot!");
+
+        client.set_activity(activity)?;
+
+        std::thread::sleep(std::time::Duration::from_secs(5));
+    }
 }

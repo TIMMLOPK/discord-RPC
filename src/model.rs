@@ -90,8 +90,8 @@ impl Timestamps {
         }
     }
 
-    pub fn start(mut self, start: i64) -> Self {
-        self.start = Some(start);
+    pub fn start(mut self, start: std::time::SystemTime) -> Self {
+        self.start = Some(start.duration_since(std::time::UNIX_EPOCH).unwrap().as_secs() as i64);
         self
     }
 
