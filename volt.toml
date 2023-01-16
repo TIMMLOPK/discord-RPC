@@ -1,0 +1,12 @@
+name = "lapce-discord"
+version = "0.1.0"
+author = "TIMMLOPK"
+display-name = "Discord Rich Presence"
+description = "Discord Rich Presence for Lapce [Testing]"
+icon = "discord.png"
+wasm = "target/wasm32-wasi/release/discord-lapce.wasm"
+repository = "https://github.com/lapce/lapce-rust"
+
+[activation]
+language = ["*"]
+workspace-contains = ["*/Cargo.toml"]
